@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1040" role="img" aria-labelledby="title"><title id="title">Frasco conceptual DubaiParfums Noir en vidrio borgoña</title>
+<defs>
+ <radialGradient id="halo"><stop stop-color="#b54750" stop-opacity=".55"/><stop offset=".48" stop-color="#67232e" stop-opacity=".27"/><stop offset="1" stop-color="#270e16" stop-opacity="0"/></radialGradient>
+ <linearGradient id="glass"><stop stop-color="#0a080d"/><stop offset=".10" stop-color="#501723"/><stop offset=".19" stop-color="#8e3039"/><stop offset=".4" stop-color="#38131d"/><stop offset=".66" stop-color="#2e0d18"/><stop offset=".84" stop-color="#661e2a"/><stop offset=".95" stop-color="#1a0b10"/><stop offset="1" stop-color="#0a0508"/></linearGradient>
+ <linearGradient id="sheen"><stop stop-color="#ef9d80" stop-opacity=".82"/><stop offset=".11" stop-color="#f6c1a1" stop-opacity=".2"/><stop offset=".4" stop-color="#f4bba0" stop-opacity="0"/><stop offset=".86" stop-color="#e5a180" stop-opacity=".05"/><stop offset="1" stop-color="#e5ab86" stop-opacity=".7"/></linearGradient>
+ <linearGradient id="cap"><stop stop-color="#08080c"/><stop offset=".14" stop-color="#58505b"/><stop offset=".27" stop-color="#1f1b25"/><stop offset=".75" stop-color="#07070b"/><stop offset=".89" stop-color="#59515a"/><stop offset="1" stop-color="#09070a"/></linearGradient>
+ <linearGradient id="metal" x2="1" y2="0"><stop stop-color="#a35a52"/><stop offset=".14" stop-color="#f3c4a2"/><stop offset=".38" stop-color="#bc8072"/><stop offset=".63" stop-color="#f5d0ad"/><stop offset=".82" stop-color="#aa635e"/><stop offset="1" stop-color="#7e484b"/></linearGradient>
+ <linearGradient id="plaque" x2="0" y2="1"><stop stop-color="#202029"/><stop offset=".55" stop-color="#08070c"/><stop offset="1" stop-color="#21151b"/></linearGradient>
+ <radialGradient id="base"><stop stop-color="#6c3643" stop-opacity=".7"/><stop offset="1" stop-color="#170c11" stop-opacity="0"/></radialGradient>
+ <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="23"/></filter>
+ <filter id="glow"><feGaussianBlur stdDeviation="13"/></filter>
+ </defs>
+ <ellipse cx="450" cy="530" rx="450" ry="485" fill="url(#halo)"/>
+ <ellipse cx="450" cy="935" rx="320" ry="42" fill="#060509" opacity=".9" filter="url(#shadow)"/>
+ <ellipse cx="450" cy="895" rx="345" ry="130" fill="url(#base)" opacity=".95"/>
+ <g opacity=".52"><circle cx="450" cy="512" r="380" fill="none" stroke="#cc876e" stroke-opacity=".18"/><circle cx="450" cy="512" r="320" fill="none" stroke="#ad6a66" stroke-opacity=".16"/></g>
+ <g><rect x="353" y="224" width="194" height="110" rx="16" fill="#0a0609" stroke="#d29a7a" stroke-width="3"/><rect x="370" y="240" width="160" height="81" rx="8" fill="url(#metal)" opacity=".69"/><rect x="380" y="243" width="140" height="75" rx="5" fill="#140e13"/></g>
+ <rect x="315" y="105" width="270" height="175" rx="31" fill="url(#cap)" stroke="#7e5964" stroke-width="3"/><path d="M334 128L334 255M365 119L365 260M556 125L556 255" stroke="#fcddc1" stroke-opacity=".32" stroke-width="9" stroke-linecap="round"/><path d="M327 259H572" stroke="#d09b82" stroke-width="6" opacity=".75"/>
+ <rect x="208" y="300" width="484" height="606" rx="75" fill="#050509" opacity=".65" filter="url(#shadow)"/>
+ <rect x="218" y="300" width="464" height="594" rx="62" fill="url(#glass)" stroke="url(#metal)" stroke-width="7"/>
+ <rect x="238" y="319" width="424" height="555" rx="47" fill="url(#sheen)" opacity=".72"/>
+ <path d="M260 351V836" stroke="#ffcfbd" stroke-width="12" stroke-linecap="round" opacity=".35"/>
+ <path d="M646 362V820" stroke="#f4c6ae" stroke-width="8" stroke-linecap="round" opacity=".4"/>
+ <path d="M264 832Q450 871 630 832" fill="none" stroke="#d98675" stroke-opacity=".5" stroke-width="7"/>
+ <rect x="281" y="477" width="338" height="257" rx="4" fill="url(#plaque)" stroke="#dba489" stroke-width="3"/>
+ <rect x="296" y="491" width="308" height="229" rx="1" fill="none" stroke="#dba489" stroke-opacity=".4"/>
+ <path d="M414 522H486" stroke="#d8a085" stroke-width="2"/><circle cx="450" cy="523" r="4" fill="#efc09e"/>
+ <text x="450" y="597" fill="#eec5aa" font-family="Georgia, serif" font-size="62" letter-spacing="15" text-anchor="middle">DUBAI</text>
+ <text x="450" y="637" fill="#d09a88" font-family="Arial, sans-serif" font-size="19" font-weight="bold" letter-spacing="12" text-anchor="middle">PARFUMS</text>
+ <path d="M362 664H538" stroke="#c48f7b" stroke-opacity=".5"/>
+ <text x="450" y="688" fill="#d4ad93" font-family="Georgia,serif" font-size="19" font-style="italic" letter-spacing="4" text-anchor="middle">N O I R  /  0 1</text>
+ <path d="M250 368Q244 470 251 598" fill="none" stroke="#ffb6a2" stroke-width="11" stroke-opacity=".19" filter="url(#glow)"/>
+ <path d="M226 840Q445 918 674 839" fill="none" stroke="#d6a08c" stroke-width="3" opacity=".6"/>
+ </svg>

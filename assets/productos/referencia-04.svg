@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 530" role="img" aria-label="Ilustración editorial de 9 AM. Envase conceptual, no fotografía oficial.">
+ <defs>
+  <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8e7d9" stop-opacity=".64"/><stop offset=".12" stop-color="#0c2238"/><stop offset=".65" stop-color="#2a718d"/><stop offset=".88" stop-color="#0c2238"/><stop offset="1" stop-color="#f8e4d1" stop-opacity=".7"/></linearGradient>
+  <linearGradient id="liquid" x1="0" x2="1" y1="0" y2=".15"><stop stop-color="#0c2238"/><stop offset=".32" stop-color="#2a718d"/><stop offset=".74" stop-color="#0c2238"/><stop offset="1" stop-color="#2a718d"/></linearGradient>
+  <linearGradient id="cap" x1="0" x2="1"><stop stop-color="#0c2238"/><stop offset=".2" stop-color="#2a718d"/><stop offset=".5" stop-color="#0c2238"/><stop offset=".76" stop-color="#2a718d"/><stop offset="1" stop-color="#0c2238"/></linearGradient>
+  <linearGradient id="metal" x1="0" x2="1"><stop stop-color="#8b6041"/><stop offset=".4" stop-color="#fff1c5"/><stop offset=".75" stop-color="#ab7c4f"/><stop offset="1" stop-color="#ffe6a7"/></linearGradient>
+  <filter id="shadow"><feGaussianBlur stdDeviation="22"/></filter>
+ </defs>
+ <ellipse cx="221" cy="460" rx="126" ry="22" fill="#000" opacity=".47" filter="url(#shadow)"/>
+ <ellipse cx="220" cy="270" rx="144" ry="173" fill="#2a718d" opacity=".1" filter="url(#shadow)"/>
+ <g><rect x="155" y="92" width="130" height="80" rx="2" fill="url(#cap)"/><rect x="163" y="163" width="114" height="16" fill="url(#metal)"/><rect x="120" y="153" width="200" height="279" rx="11" fill="url(#glass)" stroke="#eee5d7" stroke-opacity=".7" stroke-width="3"/><rect x="136" y="170" width="168" height="241" rx="4" fill="url(#liquid)" opacity=".89"/><path d="M137 191 Q135 250 140 373" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" opacity=".18"/><path d="M297 181 Q319 285 303 390" fill="none" stroke="#b4dfe1" stroke-width="7" stroke-linecap="round" opacity=".27"/>
+ <polygon points="136,246 304,246 304,356 136,356" fill="#0c2238" fill-opacity=".88" stroke="#dbad79" stroke-opacity=".72" stroke-width="1.1"/>
+ <text x="220" y="272" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.5" letter-spacing="2" fill="#edcf9b">AFNAN</text><text x="220" y="293" text-anchor="middle" font-family="Georgia,serif" font-size="16" fill="#f6e9d4" font-weight="bold" letter-spacing=".6">9 AM</text>
+ <path d="M194 338 H246" stroke="#e8bf82" stroke-width="1.4"/><text x="220" y="351" text-anchor="middle" font-family="Arial,sans-serif" font-size="6.8" letter-spacing="2" fill="#ddc5a0">EAU DE PARFUM</text>
+ </g><circle cx="319" cy="135" r="3" fill="#b4dfe1" opacity=".7"/>
+ </svg>

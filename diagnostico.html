@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>DubaiParfums · Diagnóstico Supabase</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,-apple-system,sans-serif}body{margin:0;background:#100d18;color:#f4eef3;padding:5vh 18px}main{max-width:810px;margin:auto}
+h1{font-size:clamp(2rem,5vw,3rem)}.label{letter-spacing:.25em;color:#cfae83;text-transform:uppercase;font-size:.75rem}
+.card{background:#1e1826;border:1px solid #46334b;border-radius:18px;padding:20px;margin:14px 0}strong{color:#dbc09b}.ok{color:#7ed7ab}.bad{color:#ffacb1}
+button,a{color:#e3c08b}button{cursor:pointer;background:#5e274b;color:white;border:1px solid #a36b7c;padding:12px 18px;border-radius:10px}code{color:#dfc7e4;overflow-wrap:anywhere}
+small{color:#ad9cb0}li{padding:5px 0}
+</style></head><body><main>
+<p class="label">DubaiParfums / Herramienta de instalación</p><h1>Prueba de conexión a Supabase</h1>
+<p>Este diagnóstico solo <b>lee</b> la identidad de la tienda, productos y sesión. No publica cambios ni muestra ninguna clave privada.</p>
+<div class="card"><strong>Configuración</strong><p id="config">Verificando...</p></div>
+<div class="card"><strong>Identidad de la base</strong><p id="identity">Verificando...</p></div>
+<div class="card"><strong>Catálogo / lectura pública</strong><p id="products">Verificando...</p></div>
+<div class="card"><strong>Autenticación</strong><p id="auth">Verificando...</p></div>
+<button id="again">Repetir diagnóstico</button> &nbsp; <a href="./index.html">Volver a la tienda</a>
+<p><small>Si la identidad no coincide, DubaiParfums bloqueará la lectura del catálogo y los pedidos. Nunca debes pegar una service_role o sb_secret_ en archivos web.</small></p>
+</main><script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.119.0"></script>
+<script type="module">
+import {configured,db,verifyStoreIdentity} from './assets/shared.js';
+import {SUPABASE_URL,DUBAIPARFUMS_PROJECT_REF} from './assets/supabase-config.js';
+const el=x=>document.getElementById(x);
+const show=(id,ok,text)=>{el(id).className=ok?'ok':'bad';el(id).textContent=(ok?'✓ ':'✗ ')+text};
+async function run(){
+  show('config',configured,configured?`Configurado: ${SUPABASE_URL} · ref ${DUBAIPARFUMS_PROJECT_REF}`:'Faltan URL, publishable key y referencia del nuevo proyecto (o no coinciden).');
+  if(!configured){show('identity',false,'No hay conexión configurada.');show('products',false,'No se consultarán tablas.');show('auth',false,'Sin conexión.');return}
+  const identity=await verifyStoreIdentity();show('identity',identity.ok,identity.reason);
+  if(!identity.ok){show('products',false,'Bloqueado para evitar leer otra tienda.');show('auth',false,'Bloqueado para evitar autenticar en otra tienda.');return}
+  const {data,error,count}=await db.from('products').select('id',{head:true,count:'exact'}).eq('active',true);
+  show('products',!error,error?error.message:`Catálogo accesible. ${count??0} perfumes públicos activos.`);
+  const {data:authData,error:authError}=await db.auth.getUser();
+  show('auth',!authError,!authError?(authData.user?`Sesión activa: ${authData.user.email||'usuario'}`:'Auth disponible. Sin sesión iniciada.'):`Revisa la autenticación: ${authError.message}`);
+}
+el('again').onclick=run;run();
+</script></body></html>
